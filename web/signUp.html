@@ -1,0 +1,77 @@
+<!--
+To change this template, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <title>Form</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  </head>
+  <body>
+    <h1 align="center">Sign up Form</h1>
+	<form action="signup.do" method="Post">
+		<table cellspacing="5" align="center">
+			<tr>
+				<th>Username</th>
+				<td><input type="text" name="Username" size="35"></td>
+			</tr>
+			<tr>
+				<th>Password</th>
+				<td><input type="password" name="Password"></td>
+			</tr>
+            <tr>
+				<th>Confirm Password</th>
+				<td><input type="password" name="Confirm Password"></td>
+			</tr>
+			<tr>
+				<th>Email Id</th>
+				<td><input type="text" name="Email Id"></td>
+			</tr>
+			<tr>
+				<th>Phone</th>
+				<td><input type="text" name="phone"></td>
+			</tr>
+			<tr>
+				<th>Semester</th>
+				<td>
+                    <select name="Semester">
+                        <option value="1">Sem 1</option>
+                        <option value="2">Sem 2</option>
+                        <option value="3">Sem 3</option>
+                        <option value="4">Sem 4</option>
+                        <option value="5">Sem 5</option>
+                        <option value="6">Sem 6</option>
+                        <option value="7">Sem 7</option>
+                        <option value="8">Sem 8</option>
+                    </select>
+                </td>
+			</tr>
+            <tr>
+				<th>Branch</th>
+				<td>
+                    <select name="Branch">
+                        <option value="CE">CE</option>
+                        <option value="EC">EC</option>
+                        <option value="IT">IT</option>
+                        <option value="ME">ME</option>
+                        <option value="CIE">CIE</option>
+                        <option value="BT">BT</option>
+                        <option value="NT">NT</option>
+                        <option value="CHE">CHE</option>
+                    </select>
+                </td>
+			</tr>
+            <tr>
+                <th>College</th>
+                <td><input type="text" name="College"></td>
+            </tr>
+			<tr>
+				<td><input type="submit" name="Submit" value="Submit" style="height:30px ; width:70px "></td>
+				<td><input type="reset" name="Reset" value="Reset" style="height:30px ; width:70px "></td>
+			</tr>
+
+		</table>
+	</form>
+  </body>
+</html>

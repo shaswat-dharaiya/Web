@@ -4,10 +4,6 @@
         <servlet-name>LoginController</servlet-name>
         <servlet-class>com.vvp.java.LoginController</servlet-class>
     </servlet>
-    <servlet>
-        <servlet-name>Session</servlet-name>
-        <servlet-class>com.vvp.java.Session</servlet-class>
-    </servlet>
     <servlet-mapping>
         <servlet-name>LoginController</servlet-name>
         <url-pattern>/logincontroller.do</url-pattern>
@@ -27,10 +23,6 @@
     <servlet-mapping>
         <servlet-name>SignUp</servlet-name>
         <url-pattern>/signup.do</url-pattern>
-    </servlet-mapping>
-    <servlet-mapping>
-        <servlet-name>Session</servlet-name>
-        <url-pattern>/session.do</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

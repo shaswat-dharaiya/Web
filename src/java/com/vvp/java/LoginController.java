@@ -11,6 +11,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -31,13 +32,26 @@ public class LoginController extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
+        
         try {
             String uname = request.getParameter("username");
             String pwd = request.getParameter("password");
+            
+            HttpSession session = request.getSession();
+            
             if(uname.equals("admin") && pwd.equals("admin"))
+            {
+                session.setAttribute("isAuth", "true");
                 out.println("Welcome");
+                response.sendRedirect("Multiplication.html");
+            }
             else
+            {
+                session.setAttribute("isAuth", "false");
                 out.println("Try Again");
+                response.sendRedirect("login.html");
+            }
+                
         } finally {
             out.close();
         }

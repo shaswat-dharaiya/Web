@@ -10,6 +10,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -29,13 +30,23 @@ public class MulTable extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         try {
-           int ans;
-           int no = Integer.parseInt(request.getParameter("number"));
-           for(int i=1;i<=10;i++)
+           HttpSession session = request.getSession();
+           String check = (String) session.getAttribute("isAuth");
+           if(check!= null && check.equals("true"))               
            {
-               ans = no*i;
-               out.println(ans + "<br>");
+            int ans;
+            int no = Integer.parseInt(request.getParameter("number"));
+            for(int i=1;i<=10;i++)
+            {
+                ans = no*i;
+                out.println(ans + "<br>");
+            }
            }
+           else
+           {
+               response.sendRedirect("login.html");
+           }
+           
             
         } finally {            
             out.close();

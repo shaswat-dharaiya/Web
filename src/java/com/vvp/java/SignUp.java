@@ -142,8 +142,8 @@ public class SignUp extends HttpServlet {
             
             if(redirecting == true)
             {
-                                        out.println("Redirect");
-                        response.sendRedirect("signUp.html");
+                out.println("Redirect");
+                response.sendRedirect("signUp.html");
             }
 
         } finally {            
